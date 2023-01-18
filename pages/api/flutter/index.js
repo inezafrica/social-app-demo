@@ -42,6 +42,7 @@ export default withApiAuthRequired(async function handler(req, res) {
         const insertDataJson = await insertData.json();
         res.status(200).json(insertDataJson);
         break;
+      // Added by me
       case "PUT":
         const updateData = await fetch(`${baseUrl}/updateOne`, {
           ...fetchOptions,
